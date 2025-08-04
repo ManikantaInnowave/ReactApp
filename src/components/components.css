@@ -1,0 +1,266 @@
+/* Todo List Styles */
+.todo-list {
+  width: 100%;
+}
+
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-form .input {
+  flex: 1;
+}
+
+.todos {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  background: #f8f9fa;
+  border-radius: 5px;
+  border-left: 3px solid #667eea;
+  transition: all 0.2s ease;
+}
+
+.todo-item:hover {
+  background: #e9ecef;
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+  border-left-color: #28a745;
+}
+
+.todo-checkbox {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.todo-text {
+  flex: 1;
+  text-decoration: none;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.delete-button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s ease;
+}
+
+.delete-button:hover {
+  background: #c82333;
+}
+
+.no-todos {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Counter Styles */
+.counter {
+  text-align: center;
+}
+
+.counter-display h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.counter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.counter-btn {
+  min-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.counter-btn.reset {
+  border-radius: 5px;
+  min-width: 80px;
+  height: 50px;
+  font-size: 1rem;
+}
+
+.counter-info {
+  text-align: left;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 3px solid #667eea;
+}
+
+.counter-info p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.counter-info ul {
+  margin-left: 20px;
+}
+
+.counter-info li {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* User Form Styles */
+.user-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.input.error {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Weather Widget Styles */
+.weather-widget {
+  text-align: center;
+}
+
+.loading, .error {
+  padding: 20px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.error {
+  color: #dc3545;
+}
+
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.weather-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.weather-icon {
+  font-size: 2rem;
+}
+
+.weather-main {
+  margin-bottom: 20px;
+}
+
+.temperature {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.condition {
+  font-size: 1.2rem;
+  color: #666;
+  text-transform: capitalize;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.detail span:first-child {
+  color: #666;
+}
+
+.detail span:last-child {
+  font-weight: bold;
+  color: #333;
+}
+
+.weather-note {
+  background: #e3f2fd;
+  padding: 10px;
+  border-radius: 5px;
+  border-left: 3px solid #2196f3;
+  font-size: 0.85rem;
+  color: #1976d2;
+}
+
+.weather-note p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .todo-form {
+    flex-direction: column;
+  }
+  
+  .counter-controls {
+    flex-wrap: wrap;
+  }
+  
+  .weather-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .weather-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+} 
